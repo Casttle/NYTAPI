@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ny Times API</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href=style.css>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -16,37 +19,36 @@
     </div>
     <div class="container">
 
-        <form>
+        <form class="border border-dark rounded">
             <div class="form-group">
-                    <div class="alert alert-primary" role="alert">Search Perameters</div>          
+                <div class="alert alert-primary match" role="alert">Search Perameters</div>          
                 <!--Input fields-->
-                <label for="exampleInputEmail1">Search Term:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="searchBar">Search Term:</label>
+                <input type="text" class="form-control" id="searchBar" aria-describedby="emailHelp">
+               </div>
+            <div class="form-group">
+                <label for="recNum">Number of Records to Retrieve:</label>
+                <input type="number" class="form-control" id="recNum">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Number of Records to Retrieve:</label>
-                <input type="number" class="form-control" id="exampleInputPassword1">
+                <label for="startYear">Start Year (Optional):</label>
+                <input type="year" class="form-control" id="startYear">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Start Year (Optional):</label>
-                <input type="year" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">End Year (Optional):</label>
-                <input type="year" class="form-control" id="exampleInputPassword1">
+                <label for="endYear">End Year (Optional):</label>
+                <input type="year" class="form-control" id="endYear">
             </div>
 
             <!--Search/Clear buttons-->                                
            
-            <button type="search" class="btn btn-primary">Search</button>
-            <button type="clear" class="btn btn-primary">Clear Results</button>
+            <button id="search" type="search" class="btn btn-primary match">Search</button>
+            <button id="clear" type="clear" class="btn btn-primary match">Clear Results</button>
         </form>
 
         <div class=row>
             <div class="col">Publish Here</div>
         </div>
-        <script src="java.js"></script>
+<script src="java.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
